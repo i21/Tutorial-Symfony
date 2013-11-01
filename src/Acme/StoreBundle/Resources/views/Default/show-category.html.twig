@@ -1,0 +1,11 @@
+<body>
+
+{{ category.id }}
+<br>
+{{ category.name }}
+<br>
+{% for p in category.products %}
+{{ p.name}} &nbsp; {{ p.description }}
+<br>
+{% endfor %}
+</body>

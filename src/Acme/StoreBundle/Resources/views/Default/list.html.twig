@@ -1,0 +1,21 @@
+{# src/Acme/StoreBundle/Resources/views/Default/list.html.twig #}
+
+<body>
+<table style="border: 1px dotted #333;">
+	<tr>
+		<th>Id</th>
+		<th>Nom</th>
+		<th>Descripcio</th>
+		<th>Preu</th>
+
+	</tr>
+	{% for p in products %} 
+	<tr>
+		<td>{{ p.id }}</td>
+		<td>{{ p.name }}</td>
+		<td>{{ p.description }}</td>
+		<td>{{ p.price }}</td>
+	</tr>
+	{% endfor %}
+</table>
+</body>

@@ -1,0 +1,29 @@
+acme_store_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: AcmeStoreBundle:Default:index }
+
+acme_add_product_test:
+    pattern: /store/add-product
+    defaults: { _controller: AcmeStoreBundle:Default:create }
+
+acme_show_product_test:
+    pattern: /store/show/{id}
+    defaults: { _controller: AcmeStoreBundle:Default:show }
+    requirements:
+        id: \d+
+
+acme_update_product_test:
+    pattern: /store/update/{id}
+    defaults: { _controller: AcmeStoreBundle:Default:update }
+    requirements:
+        id: \d+
+
+acme_products_list_test:
+    pattern: /store/list
+    defaults: { _controller: AcmeStoreBundle:Default:list }
+
+acme_show_category:
+    pattern: /store/category/{id}
+    defaults: { _controller: AcmeStoreBundle:Default:showCategory }
+    requirements:
+        id: \d+
