@@ -1,0 +1,15 @@
+# Acme/TaskBudnel/Resources/config/validation.yml
+Acme\TaskBundle\Entity\Task:
+    properties:
+        task:
+            - NotBlank: ~
+        dueDate:
+            - NotBlank: ~
+            - Type: \Datetime
+        category:
+            - Type: \Acme\TaskBundle\Entity\Category
+
+Acme\TaskBundle\Entity\Category:
+    properties:
+        name:
+            - NotBlank: { message: "author.name.not_blank" }

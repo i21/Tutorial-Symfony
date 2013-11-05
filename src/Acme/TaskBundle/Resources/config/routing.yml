@@ -1,0 +1,21 @@
+acme_task_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: AcmeTaskBundle:Default:index }
+
+acme_task_new_task:
+    pattern: /{_locale}/task/newtask
+    defaults: { _controller: AcmeTaskBundle:Default:new, _locale: en }
+    requirements:
+        _locale: en|ca
+
+acme_task_new_task2:
+    pattern: /task/newtask2
+    defaults: { _controller: AcmeTaskBundle:Default:new2 }
+
+acme_task_contact:
+    pattern: /task/contact
+    defaults: { _controller: AcmeTaskBundle:Default:contact }
+
+acme_task_admin:
+    pattern: /admin
+    defaults: { _controller: AcmeTaskBundle:Default:contact }

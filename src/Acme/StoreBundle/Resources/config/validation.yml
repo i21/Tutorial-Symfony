@@ -2,4 +2,4 @@
 Acme\StoreBundle\Entity\Product:
     properties:
         name:
-            - NotBlank: ~
+            - NotBlank: {message: "author.name.not_blank"}

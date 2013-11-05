@@ -1,3 +1,7 @@
+acme_user:
+    resource: "@AcmeUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
 acme_task:
     resource: "@AcmeTaskBundle/Resources/config/routing.yml"
     prefix:   /
@@ -10,3 +14,9 @@ acme_hello:
     resource: "@AcmeHelloBundle/Resources/config/routing.yml"
     prefix:   /
 
+login:
+    pattern: /login
+    defaults: { _controller: AcmeSecurityBundle:Security:login }
+
+login_check:
+    pattern: /login_check

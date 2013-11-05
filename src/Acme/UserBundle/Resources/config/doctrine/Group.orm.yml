@@ -1,0 +1,20 @@
+Acme\UserBundle\Entity\Group:
+    type: entity
+    table: acme_groups
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        name:
+            type: string
+            length: '30'
+        role:
+            type: string
+            length: '20'
+            unique: true
+    ManyToMany:
+        users:
+            targetEntity: User
+            mappedBy: groups

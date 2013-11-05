@@ -1,0 +1,30 @@
+Acme\UserBundle\Entity\User:
+    type: entity
+    table: useers
+    fields:
+        id:
+            type: integer
+            id: true
+            unique: true
+            generator:
+                strategy: AUTO
+        username:
+            type: string
+            length: '255'
+        salt:
+            type: string
+            length: '32'
+        password:
+            type: string
+            length: '40'
+        email:
+            type: string
+            length: '60'
+            unique: true
+        isActive:
+            type: boolean
+            name: active
+    ManyToMany:
+        group:
+            targetEntity: Group
+            inversedBy: users

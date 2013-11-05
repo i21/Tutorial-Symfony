@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+            <body>
+            <trans-unit id="1">
+                <source>Symfony2 is great</source>
+                <target>J'aime Symfony2</target>
+            </trans-unit>
+            <trans-unit id="2">
+                <source>symfony2.great</source>
+                <target>J'aime Symfony2</target>
+            </trans-unit>
+            <trans-unit id="3">
+            	<source>{0} There are no apples|{1} There is one apple|]1,19] There are %count% apples|[20,Inf] There are many apples</source>
+            	<target>{0} No hay manzanas|{1} Hay una manzana|]1,19] Hay %count% manzanas|[20,Inf] Hay muchas manzanas</target>
+            </trans-unit>
+            <trans-unit id="4">
+            	<source>Hello %name%</source>
+            	<target>OLA %name% K ASE?</target>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

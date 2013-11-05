@@ -1,0 +1,6 @@
+# src/Acme/StoreBundle/Resources/translations/messages.ca.yml
+
+Symfony2 is great:  "La symfony2"
+symfony2.great:     "la symfony2"
+'{0} There are no apples|{1} There is one apple|]1,19] There are %count% apples|[20,Inf] There are many apples': "{0}No hi han pomes|{1}Hi ha una poma|[1,19]Hi han %count% pomes|[20,Inf[Hi han moltes pomes"
+'Hello %name%': "Hola %name%!"

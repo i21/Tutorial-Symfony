@@ -1,0 +1,26 @@
+{# src/Acme/TestBundle/Resources/views/Default/new.html.twig #}
+<style>
+task_field{
+	color: #555;
+	border: 3px dotted #666;
+}
+</style>
+
+{{ form_start(form, {'action': path('acme_task_new_task'), 'method': 'GET'}) }}
+	{{ form_errors(form) }}
+
+	<div style="border: 1px solid #246">
+		{{ form_label(form.task, 'Task Description') }}
+		{{ form_errors(form.task) }}
+		{{ form_widget(form.task, {'attr': {'class': 'task_field'}}) }}
+	</div>
+
+	{{ form_row(form.dueDate) }}
+
+	<h3>Category</h3>
+	{{ form_row(form.category.name) }}
+	<hr>
+	{{ form_rest(form) }}
+
+	<input type="submit" />
+{{ form_end(form) }}

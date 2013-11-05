@@ -1,6 +1,8 @@
 acme_store_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: AcmeStoreBundle:Default:index }
+    pattern:  /{_locale}/trad/{name}
+    defaults: { _controller: AcmeStoreBundle:Default:index, _locale: en }
+    requirements:
+        _locale: en|fr|es|de|ca
 
 acme_add_product_test:
     pattern: /store/add-product

@@ -9,6 +9,45 @@ use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends Controller
 {
+
+	public function indexAction($name) {
+		$translator = $this->get('translator');
+		//$translated = $this->get('translator')->trans('Symfony is great');
+
+		/*$translated = $this->get('translator')->trans(
+			'Hello %name%',
+			array('%name%' => $name)
+			);*/
+
+		//$translated .= "<br>";
+		$request = $this->getRequest();
+		$locale = $request->getLocale();
+
+		$translated = $translator->trans('Symfony2 is great');
+		$translated .= "<br>";
+		$translated .= $translator->trans('symfony2.great');
+
+		/* Plural */
+		$count = 25;
+
+		/*$translated = $translator->transChoice(
+			'There is one apple|There are %count% apples',
+			$count,
+			array('%count%' => $count)
+			);*/
+		$translated = $translator->transChoice(
+			'{0} There are no apples|{1} There is one apple|]1,19] There are %count% apples|[20,Inf] There are many apples',
+			$count,
+			array('%count%' => $count)
+			);
+		
+
+		//return new Response($translated);
+		return $this->render('AcmeStoreBundle:Default:index.html.twig',
+			array('name' => $name,
+				'count' => $count));
+	}
+
 	public function createAction()
 	{
 		//$category = new Category();
@@ -102,8 +141,4 @@ class DefaultController extends Controller
 		return $this->render('AcmeStoreBundle:Default:list.html.twig', array("products"=>$products));
 	}
 	
-    public function indexAction($name)
-    {
-        return $this->render('AcmeStoreBundle:Default:index.html.twig', array('name' => $name));
-    }
 }

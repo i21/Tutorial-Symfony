@@ -1,1 +1,5 @@
-Hello {{ name }}!
+{% trans %}Hello %name%{% endtrans %}
+<br>
+{% transchoice count %}
+	{0} There are no apples|{1} There is one apple|]1,19] There are %count% apples|[20,Inf] There are many apples
+{% endtranschoice %}
